@@ -1,0 +1,8 @@
+@Metadata.layer: #CORE
+annotate entity ZFLH_KETERANGAN_ENTITY
+    with
+{
+    @EndUserText.label: 'Keterangan'
+    keterangan;
+    
+}

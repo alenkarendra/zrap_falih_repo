@@ -1,0 +1,15 @@
+@EndUserText.label: 'Access control for ZFLH_RAP_TRAVEL'
+@MappingRole: true
+define role ZFLH_RAP_TRAVEL {
+    grant
+        select
+            on
+                ZFLH_RAP_TRAVEL
+                    where
+//                        ( TravelStatus )                       
+//                      = aspect pfcg_auth ( ZFLHSTAT04, ZFLHSTAT04,  actvt = '03') 
+//                        and
+//                        CurrencyCode = 'EUR'; 
+                        TRUE;
+                        
+}
