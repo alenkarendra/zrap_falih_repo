@@ -97,13 +97,13 @@ CLASS lhc_Travel IMPLEMENTATION.
 
   METHOD acceptTravel.
   "Simulasi unauthorized
-  AUTHORITY-CHECK OBJECT 'ZFLHSTAT04'
-    ID 'ACTVT' FIELD '02'.
-  IF sy-subrc <> 0.
-    APPEND VALUE #( %msg = NEW zcm_rap_1( severity = if_abap_behv_message=>severity-error
-                                          textid   = zcm_rap_1=>unauthorized ) ) TO reported-travel.
-    RETURN.
-  ENDIF.
+*  AUTHORITY-CHECK OBJECT 'ZFLHSTAT04'
+*    ID 'ACTVT' FIELD '02'.
+*  IF sy-subrc <> 0.
+*    APPEND VALUE #( %msg = NEW zcm_rap_1( severity = if_abap_behv_message=>severity-error
+*                                          textid   = zcm_rap_1=>unauthorized ) ) TO reported-travel.
+*    RETURN.
+*  ENDIF.
 
     " Set the new overall status
     MODIFY ENTITIES OF zflh_rap_travel IN LOCAL MODE
@@ -192,13 +192,13 @@ CLASS lhc_Travel IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD rejectTravel.
-  AUTHORITY-CHECK OBJECT 'ZFLHSTAT04'
-    ID 'ACTVT' FIELD '02'.
-  IF sy-subrc <> 0.
-    APPEND VALUE #( %msg = NEW zcm_rap_1( severity = if_abap_behv_message=>severity-error
-                                          textid   = zcm_rap_1=>unauthorized ) ) TO reported-travel.
-    RETURN.
-  ENDIF.
+*  AUTHORITY-CHECK OBJECT 'ZFLHSTAT04'
+*    ID 'ACTVT' FIELD '02'.
+*  IF sy-subrc <> 0.
+*    APPEND VALUE #( %msg = NEW zcm_rap_1( severity = if_abap_behv_message=>severity-error
+*                                          textid   = zcm_rap_1=>unauthorized ) ) TO reported-travel.
+*    RETURN.
+*  ENDIF.
 
     " Set the new overall status
     MODIFY ENTITIES OF zflh_rap_travel IN LOCAL MODE
